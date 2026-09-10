@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Organic Search</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">INIZIO practical test</p>
+      <h1>Google Organic Search</h1>
+      <p class="intro">
+        Zadejte klíčové slovní spojení. Aplikace zobrazí organické výsledky
+        z první stránky Google a umožní jejich stažení ve formátu JSON.
+      </p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <label for="query">Klíčové slovní spojení</label>
+      <div class="search-row">
+        <input
+          id="query"
+          name="query"
+          type="text"
+          autocomplete="off"
+          placeholder="např. webdesign Praha"
+          required
+        >
+        <button id="search-button" type="submit">Hledat</button>
+      </div>
+    </form>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="results-section" class="results-section" hidden>
+      <div class="results-header">
+        <h2 id="results-title">Výsledky</h2>
+        <button id="download-button" class="secondary" type="button">
+          Stáhnout JSON
+        </button>
+      </div>
+      <ol id="results-list" class="results-list"></ol>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
